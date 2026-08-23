@@ -61,6 +61,34 @@ Do not copy `NBodyProblem.exe` alone to another folder without the three DLLs be
 - `sfml-window-2.dll`
 - `sfml-system-2.dll`
 
+## Python physics engine
+
+From the project root (Python 3.10+):
+
+```powershell
+python -m deeplearning
+```
+
+On systems where the interpreter is `python3`:
+
+```bash
+python3 -m deeplearning
+```
+
+Use `-m`. `python3 deeplearning` will not work, because `deeplearning` is a package (relative imports). The `-m` form runs `deeplearning/__main__.py`.
+
+This streams a million steps (`dt = 1` internal unit ≈ 4.74 years) to:
+
+- `deeplearning/euler.dat`
+- `deeplearning/rk4.dat`
+- `deeplearning/verlet.dat`
+
+Optional install (stdlib only today):
+
+```powershell
+pip install -r deeplearning/requirements.txt
+```
+
 ## Rebuilding after changes
 
 ```powershell
@@ -79,6 +107,9 @@ CMakeLists.txt
 physics/
   calculate.cpp
   definitions/calculate.hpp
+deeplearning/
+  __main__.py
+  calculate.py
 display/
   display.cpp
   grid.cpp

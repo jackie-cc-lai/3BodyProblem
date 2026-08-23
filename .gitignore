@@ -40,3 +40,10 @@ Desktop.ini
 
 # Editor / local tooling (optional; remove if you want to share IDE settings)
 .idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Generated integrator dumps (million-point streams)
+*.dat

@@ -1,0 +1,2 @@
+# Python 3.10+
+# The physics engine uses the standard library only; no third-party packages required.
